@@ -5,7 +5,7 @@ def exit_program():
 
 def create_random_password():
     length = int(input("how many characters do you like"))
-    alphabet = string.ascii_letters + string.digits
+    alphabet = string.ascii_letters + string.digits + string.punctuation
     password = ''.join(secrets.choice(alphabet) for i in range(length))
     return password
 def store_password(service, username, password):
